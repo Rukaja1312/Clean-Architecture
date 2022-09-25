@@ -131,9 +131,9 @@ namespace Infrastructure.Repository
             return cars;
         }
 
-        public async Task<SelectList> BrandList()
+        public  SelectList BrandList()
         {
-            var list = await context.SearchByBrands.OrderBy(x => x.Name).ToListAsync();
+            var list =  context.SearchByBrands.OrderBy(x => x.Name);
             return new SelectList(list, "Id", "Name");
         }
     }

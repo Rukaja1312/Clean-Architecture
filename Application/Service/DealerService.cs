@@ -12,18 +12,18 @@ public class DealerService : IDealerService
 		this.dealerRepository = dealerRepository;
 	}
 
-	public Task<bool> CreateDealer(DealerDTO dealerDTO)
+	public async Task<bool> CreateDealer(DealerDTO dealerDTO)
 	{
-		return dealerRepository.CreateDealer(dealerDTO);
+		return await dealerRepository.CreateDealer(dealerDTO);
 	}
 
-	public Task<List<CarViewDTO>> DealerCars()
+	public async Task<List<CarViewDTO>> DealerCars()
 	{
-		return dealerRepository.DealerCars();
+		return await dealerRepository.DealerCars();
 	}
 
-	public Task<bool> IsDealer(string id)
+	public async Task<bool> IsDealer(string id)
 	{
-		return dealerRepository.IsDealer(id);
+		return await dealerRepository.IsDealer(id);
 	}
 }

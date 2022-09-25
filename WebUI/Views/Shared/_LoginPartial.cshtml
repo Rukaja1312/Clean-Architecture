@@ -15,12 +15,12 @@
         var isDealer = await Dealers.IsDealer(userId);
 
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Dealers" asp-action="MyCars">My Cars</a>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Dealer" asp-action="MyCars">My Cars</a>
         </li>
         @if (!isDealer)
         {
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Dealers" asp-action="Create">Create Dealer</a>
+                <a class="nav-link text-dark" asp-area="" asp-controller="Dealer" asp-action="Create">Create Dealer</a>
             </li>
         }
         <li class="nav-item">

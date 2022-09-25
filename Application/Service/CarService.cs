@@ -14,43 +14,43 @@ public class CarService : ICarService
 		this.carRepostory = carRepostory;
 	}
 
-	public Task<SelectList> BrandList()
+	public  SelectList BrandList()
 	{
 		return carRepostory.BrandList();
 	}
 
-	public Task<bool> CarCreate(CarCreateDTO carCreateDTO)
+	public async Task<bool> CarCreate(CarCreateDTO carCreateDTO)
 	{
-		return carRepostory.CarCreate(carCreateDTO);
+		return await carRepostory.CarCreate(carCreateDTO);
 	}
 
-	public Task<bool> Delete(int id)
+	public async Task<bool> Delete(int id)
 	{
-		return carRepostory.Delete(id);
+		return await carRepostory.Delete(id);
 	}
 
-	public Task<Car> DeleteGet(int id)
+	public async Task<Car> DeleteGet(int id)
 	{
-		return carRepostory.DeleteGet(id);
+		return await carRepostory.DeleteGet(id);
 	}
 
-	public Task<bool> Edit(int carId, CarEditDTO carEditDTO)
+	public async Task<bool> Edit(int carId, CarEditDTO carEditDTO)
 	{
-		return carRepostory.Edit(carId, carEditDTO);
+		return await carRepostory.Edit(carId, carEditDTO);
 	}
 
-	public Task<CarEditDTO> Edit(int id)
+	public async Task<CarEditDTO> Edit(int id)
 	{
-		return carRepostory.Edit(id);
+		return await carRepostory.Edit(id);
 	}
 
-	public Task<List<CarViewDTO>> GetAllCars()
+	public async Task<List<CarViewDTO>> GetAllCars()
 	{
-		return carRepostory.GetAllCars();
+		return await carRepostory.GetAllCars();
 	}
 
-	public Task<List<CarViewDTO>> SortByBrand(int? id)
+	public async Task<List<CarViewDTO>> SortByBrand(int? id)
 	{
-		return carRepostory.SortByBrand(id);
+		return await carRepostory.SortByBrand(id);
 	}
 }

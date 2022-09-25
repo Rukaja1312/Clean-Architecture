@@ -17,5 +17,5 @@ public interface ICarService
     Task<bool> Edit(int carId, CarEditDTO carEditDTO);
     Task<CarEditDTO> Edit(int id);
     Task<List<CarViewDTO>> SortByBrand(int? id);
-    Task<SelectList> BrandList();
+    SelectList BrandList();
 }
